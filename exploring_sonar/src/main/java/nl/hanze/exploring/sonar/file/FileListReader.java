@@ -34,7 +34,7 @@ public class FileListReader extends AbstractFileReader implements FileReader
 		catch (IOException e) 
 		{
 			// TODO Auto-generated catch block
-			log.log(Level.ERROR,"io exception in reading file: "+ dirname + " " + filename);
+			log.log(Level.ERROR,e);
 		}
 	}
 

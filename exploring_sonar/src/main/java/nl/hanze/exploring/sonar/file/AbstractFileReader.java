@@ -8,19 +8,20 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Stream;
 
+import org.apache.logging.log4j.LogManager;
+
 public abstract class AbstractFileReader 
 {
-	protected List<String> readFile(String dirname,String filename)
+	
+	
+	protected List<String> readFile(String dirname,String filename) throws IOException
 	{
 		List<String> filesFromFile = new ArrayList<>();
 	    Path path = Paths.get(dirname, filename);
         try (Stream<String> lines = Files.lines(path)) 
         {
             lines.forEach(l -> addFilesToList(filesFromFile,l));
-        } catch (IOException e) 
-        {
-			e.printStackTrace();
-		}
+        } 
         return filesFromFile;
 	}
 

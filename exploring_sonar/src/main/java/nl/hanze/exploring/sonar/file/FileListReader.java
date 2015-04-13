@@ -10,6 +10,8 @@ import java.util.List;
 public class FileListReader extends AbstractFileReader implements FileReader {
   private static final Logger LOGGER = LogManager.getLogger(FileListReader.class.getName());
   private List<String> files;
+  private String dirname;
+  private String filename;
 
   /** initialise reader with a directory name and a filename.
    * @param dirname input directory name
@@ -17,7 +19,9 @@ public class FileListReader extends AbstractFileReader implements FileReader {
    */
   public FileListReader(String dirname, String filename) {
     try {
-      files = readFile(dirname, filename);
+      this.dirname = dirname;
+      this.filename = filename;
+      files = readFile(this.dirname, this.filename);
     } catch (IOException e) {
     LOGGER.log(Level.ERROR, e);
     }
@@ -27,4 +31,22 @@ public class FileListReader extends AbstractFileReader implements FileReader {
   public final List<String> generateFileList() {
     return files;
   }
+
+  public String getDirname() {
+    return dirname;
+  }
+
+  public void setDirname(String dirname) {
+    this.dirname = dirname;
+  }
+
+  public String getFilename() {
+    return filename;
+  }
+
+  public void setFilename(String filename) {
+    this.filename = filename;
+  }
+  
+  
 }

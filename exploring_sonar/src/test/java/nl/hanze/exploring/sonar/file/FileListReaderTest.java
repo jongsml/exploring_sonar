@@ -23,14 +23,16 @@ public class FileListReaderTest {
   }
 
   @Test
-  public void testgenerateFileList() {
+  public void testGenerateFileList() {
     int result = fileListReader.generateFileList().size();
     assertEquals(2135, result);
   }
 
   @Test
-  public void printFiles() {
+  public void printFiles() 
+  {
     List<String> files = fileListReader.generateFileList();
+    
     for (String file : files) {
       System.out.println(file);
     }

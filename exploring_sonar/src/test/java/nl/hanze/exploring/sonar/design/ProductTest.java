@@ -20,6 +20,19 @@ public class ProductTest {
   }
   
   @Test
+  public void initEmptyProductGetEdition() {
+    Product empty = new Product();
+    assertEquals(empty.getEdition(), null);
+  }
+  
+  @Test
+  public void initEmptyProductGetTitle() {
+    Product empty = new Product();
+    assertEquals(empty.getTitle(), null);
+  }
+  
+  
+  @Test
   public void testGetTitle() {
     assertEquals(product.getTitle(), "dvhn");
   }

@@ -14,7 +14,6 @@ public class Product {
   public Product(String title, String edition) {
     this.title = title;
     this.edition = edition;
-    // TODO Auto-generated constructor stub
   }
 
   public String getTitle() {
@@ -32,11 +31,6 @@ public class Product {
   public void setEdition(String edition) {
     this.edition = edition;
   }
-  @Override
-  public String toString() {
-    return "Product [title=" + title + ", edition=" + edition + "]";
-  }
-
  
 
 }

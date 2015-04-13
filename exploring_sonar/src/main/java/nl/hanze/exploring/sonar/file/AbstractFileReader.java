@@ -23,7 +23,6 @@ public abstract class AbstractFileReader
         return filesFromFile;
 	}
 
-	
 	private List<String> addFilesToList(List<String> filesFromFile, String line) 
 	{
 	  String[] splits = line.split(",");

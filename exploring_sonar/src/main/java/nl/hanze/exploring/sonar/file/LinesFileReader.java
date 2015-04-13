@@ -13,7 +13,8 @@ public class LinesFileReader
 	private void readStreamOfLinesUsingFilesWithTryBlock() throws IOException
 	{
 	    Path path = Paths.get("c:/temp", "data.txt");
-	    try(Stream<String> filteredLines = Files.lines(path).onClose(() -> System.out.println("File closed")).filter(s -> s.contains("password"))){
+	    try(Stream<String> filteredLines = Files.lines(path).onClose(() -> System.out.println("File closed")).filter(s -> s.contains("password")))
+	    {
 	        Optional<String> hasPassword = filteredLines.findFirst();
 	        if(hasPassword.isPresent()){
 	            System.out.println(hasPassword.get());

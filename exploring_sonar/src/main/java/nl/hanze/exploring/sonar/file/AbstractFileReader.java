@@ -12,19 +12,18 @@ import org.apache.logging.log4j.LogManager;
 
 public abstract class AbstractFileReader 
 {
-	
-	
 	protected List<String> readFile(String dirname,String filename) throws IOException
 	{
 		List<String> filesFromFile = new ArrayList<>();
 	    Path path = Paths.get(dirname, filename);
         try (Stream<String> lines = Files.lines(path)) 
         {
-            lines.forEach(l -> addFilesToList(filesFromFile,l));
-        } 
+        	lines.forEach(l -> addFilesToList(filesFromFile,l));
+        }
         return filesFromFile;
 	}
 
+	
 	private List<String> addFilesToList(List<String> filesFromFile, String line) 
 	{
 	  String[] splits = line.split(",");

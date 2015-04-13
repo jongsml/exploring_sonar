@@ -14,24 +14,19 @@ import java.util.List;
 import java.util.stream.Stream;
 
 
-/*
- * 
- * 
- */
-
 public class FileListReader extends AbstractFileReader implements FileReader
 {
-	
 	static Logger log = LogManager.getLogger(FileListReader.class.getName());
-
-	
 	private List<String> files;
+	
+
 	public FileListReader(String dirname,String filename)
 	{
-		try {
+		try 
+		{		
 			files = readFile(dirname,filename);
 		} 
-		catch (IOException e) 
+		catch (IOException e)
 		{
 			log.log(Level.ERROR,e);
 		}

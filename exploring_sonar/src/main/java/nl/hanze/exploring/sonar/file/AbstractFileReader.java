@@ -14,6 +14,7 @@ public abstract class AbstractFileReader
 {
 	protected List<String> readFile(String dirname,String filename) throws IOException
 	{
+	
 		List<String> filesFromFile = new ArrayList<>();
 	    Path path = Paths.get(dirname, filename);
         try (Stream<String> lines = Files.lines(path)) 

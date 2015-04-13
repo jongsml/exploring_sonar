@@ -14,7 +14,7 @@ public class FileListReaderTest {
 
   @BeforeClass
   public static void initCalculator() {
-    fileListReader = new FileListReader("/home/leon/Dropbox", "filelist.txt");
+    fileListReader = new FileListReader("c:\\", "filelist.txt");
   }
 
   @Before

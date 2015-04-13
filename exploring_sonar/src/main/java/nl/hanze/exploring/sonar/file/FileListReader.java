@@ -1,17 +1,10 @@
 package nl.hanze.exploring.sonar.file;
 
 import java.io.IOException;
-
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Stream;
 
 
 public class FileListReader extends AbstractFileReader implements FileReader

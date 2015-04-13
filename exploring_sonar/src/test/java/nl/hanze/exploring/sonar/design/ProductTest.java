@@ -31,6 +31,20 @@ public class ProductTest {
     assertEquals(empty.getTitle(), null);
   }
   
+  @Test
+  public void initEmptyProductSetTitle() {
+    Product empty = new Product();
+    empty.setTitle("foo");
+    assertEquals(empty.getTitle(), "foo");
+  }
+  
+  @Test
+  public void initEmptyProductSetEdition() {
+    Product empty = new Product();
+    empty.setEdition("foo");
+    assertEquals(empty.getEdition(), "foo");
+  }
+  
   
   @Test
   public void testGetTitle() {

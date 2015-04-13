@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.util.List;
 
 public class FileListReader extends AbstractFileReader implements FileReader {
-  static Logger log = LogManager.getLogger(FileListReader.class.getName());
+  private static final Logger LOGGER = LogManager.getLogger(FileListReader.class.getName());
   private List<String> files;
 
   /** initialise reader with a directory name and a filename.
@@ -19,7 +19,7 @@ public class FileListReader extends AbstractFileReader implements FileReader {
     try {
       files = readFile(dirname, filename);
     } catch (IOException e) {
-      log.log(Level.ERROR, e);
+    LOGGER.log(Level.ERROR, e);
     }
   }
 

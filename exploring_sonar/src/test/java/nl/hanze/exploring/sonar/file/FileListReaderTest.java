@@ -29,8 +29,7 @@ public class FileListReaderTest {
   }
 
   @Test
-  public void printFiles() 
-  {
+  public void printFiles() {
     List<String> files = fileListReader.generateFileList();
     
     for (String file : files) {

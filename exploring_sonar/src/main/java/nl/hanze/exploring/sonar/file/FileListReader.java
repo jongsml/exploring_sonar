@@ -19,7 +19,7 @@ public class FileListReader extends AbstractFileReader implements FileReader {
     try {
       files = readFile(dirname, filename);
     } catch (IOException e) {
-    LOGGER.log(Level.ERROR, e);
+      LOGGER.log(Level.ERROR, e);
     }
   }
 

@@ -1,6 +1,9 @@
 package nl.hanze.exploring.sonar.design;
 
 import static org.junit.Assert.assertEquals;
+
+import java.util.Map;
+
 import nl.hanze.exploring.sonar.factory.ProductFactory;
 
 import org.junit.BeforeClass;
@@ -16,5 +19,10 @@ public class ProductFactoryTest {
     assertEquals(product, new Product("dvhn", "zdo"));
   }
 
+  @Test
+  public void getTitleMap() {
+    Map<String, String> productMap = ProductFactory.getTitleMap();
+    assertEquals(productMap.size(), 2);
+  }
 
 }

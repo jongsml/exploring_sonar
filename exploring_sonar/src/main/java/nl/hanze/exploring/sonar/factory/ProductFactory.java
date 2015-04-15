@@ -19,7 +19,7 @@ public class ProductFactory {
     return null;
   }
 
-  private static Map<String,String> getTitleMap() {
+  public static Map<String,String> getTitleMap() {
     Map<String,String> titles = new HashMap<>();
     titles.put("lcnoo", "lc");
     titles.put("dvhnzdo", "dvhn");

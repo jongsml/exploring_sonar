@@ -11,6 +11,10 @@ import java.util.Map;
 
 
 public class PrintProductFactory {
+	
+	public PrintProductFactory(){
+		
+	}
   
   public static PrintProduct getPrintProduct(Product product) {
     if (getPrintMap().containsKey(product.getTitle() + product.getEdition())) {
@@ -18,6 +22,29 @@ public class PrintProductFactory {
     }
     return null;
   }
+  
+  public static Product getProduct(String title,String edition) {
+	    if (getTitleMap().containsKey(title + edition)) {
+	      return new Product(title,edition);
+	    }
+	    return null;
+	  }
+  
+  public static Product getProductDuplicate(String title,String edition) {
+	    if (getTitleMap().containsKey(title + edition)) {
+	      return new Product(title,edition);
+	    }
+	    return null;
+	  }
+
+  
+  
+  private static Map<String,String> getTitleMap() {
+	    Map<String,String> titles = new HashMap<>();
+	    titles.put("lcnoo", "lc");
+	    titles.put("dvhnzdo", "dvhn");
+	    return titles;
+	  }
 
   private static Map<String,List<Print>> getPrintMap() {
     Map<String,List<Print>> printMap = new HashMap<>();

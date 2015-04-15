@@ -5,7 +5,7 @@ import nl.hanze.exploring.sonar.file.FileListReader;
 
 public class FileListReaderFactory {
   public static FileListReader getFileListReader() {
-    return new FileListReader("/home/leon/Dropbox", "filelist.txt");
+    return new FileListReader("c:\\", "filelist.txt");
   }
 
 

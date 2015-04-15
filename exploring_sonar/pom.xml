@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>nl.hanze</groupId>
 	<artifactId>exploring_sonar</artifactId>
-	<version>0.0.2</version>
+	<version>0.0.3</version>
 	<name>exploring_sonar</name>
 	<description>This is a project to explore the usage of sonarqube</description>
 	<dependencies>

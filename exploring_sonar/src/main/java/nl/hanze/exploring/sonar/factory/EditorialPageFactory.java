@@ -10,6 +10,10 @@ import nl.hanze.exploring.sonar.design.Print;
 
 public class EditorialPageFactory {
 	
+	private EditorialPageFactory() {
+		
+	}
+	
   public static Page getEditorialPage(String filename,Print print,Date date) throws ParseException {
     String parts[] = filename.split("_");
     Page page = new Page();

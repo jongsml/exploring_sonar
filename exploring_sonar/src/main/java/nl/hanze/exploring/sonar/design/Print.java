@@ -7,7 +7,6 @@ public class Print {
   public Print(String section, String zone) {
     this.section = section;
     this.zone = zone;
-    // TODO Auto-generated constructor stub
   }
   public String getSection() {
     return section;

@@ -9,6 +9,10 @@ import nl.hanze.exploring.sonar.design.Page;
 import nl.hanze.exploring.sonar.design.Print;
 
 public class PageFactory {
+	
+	private PageFactory() {
+		
+	}
 
 
   public static List<Page> getPages(List<String> generateFileList, List<Print> printList, Date date) throws ParseException {
